@@ -1,10 +1,9 @@
 nav{
-    float: left;
+    float: right;
     background-color: white;
     width: 12%;
-    border-right: 4px solid #B49C34;
+    border-left: 4px solid #B49C34;
     padding-right: 10px;
-    margin-right: 10px;
     height: 980px;
 }
 nav a{
@@ -46,7 +45,7 @@ header{
     height: 200px;
     color: white;
     font-size: 2em;
-    margin-bottom: 10px;
+    border-bottom: 4px solid #B49C34;
 }
 h1{
     line-height: 200px;
@@ -60,6 +59,7 @@ h1{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+    margin: 0;
 }
 
 /* Header/Nav CSS ends */
@@ -68,7 +68,6 @@ h1{
 
 main{
     overflow: auto;
-    margin-left: 10px;
     background-image: url(../images/red-atlas.jpg);
     /* Image reference: https://www.perfectly-nintendo.com/nintendo-news-sept-26/ */
     background-size: cover;
@@ -131,7 +130,6 @@ footer{
     clear: both;
     border-top: 4px solid #B49C34;
     background-color: white;
-    margin-top: 10px;
     color:#B49C34;
     font-weight: bold;
     text-align: center;
