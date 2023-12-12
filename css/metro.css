@@ -1,34 +1,56 @@
-nav{
-    float: left;
+#nav-container{
     background-color: white;
-    width: 12%;
-    border-right: 4px solid #B49C34;
-    padding-right: 10px;
-    margin-right: 10px;
-    height: 980px;
+    border-bottom: 4px solid #B49C34;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0px;
+}
+nav > div{
+    padding: 15px 0px;
+    margin: 0px 1%;
+    text-align: center;
 }
 nav a{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
     font-size: 1em;
-    color:#B49C34;
+    color: #B49C34;
 }
 nav a:hover{
     text-decoration: underline;
 }
-nav ul{
-    list-style: none;
-    text-align: center;
+.img-nav > a{
+    color: white;
 }
-nav li{
-    box-sizing: border-box;
-    text-align: right;
-    padding-top: 15px;
+.img-nav{
+    box-sizing:border-box;
+    width: 13%;
+    border: 1px solid white;
+    color:white;
+    background-color: pink;
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    text-shadow: 2px 2px 1px #B49C34;
 }
-li > img{
-    width: 70px;
-    vertical-align: middle;
+#seaside-nav{
+    background-image: url(../images/seaside-large.jpg);
+}
+#sand-nav{
+    background-image: url(../images/sand-large.jpg);
+}
+#metro-nav{
+    background-image: url(../images/metro-large.jpg);
+}
+#wooded-nav{
+    background-image: url(../images/wooded-large.jpg);
+}
+#cascade-nav{
+    background-image: url(../images/cascade-large.jpg);
 }
 
 body{
@@ -45,7 +67,6 @@ header{
     height: 200px;
     color: white;
     font-size: 2em;
-    margin-bottom: 10px;
 }
 h1{
     line-height: 200px;
@@ -55,36 +76,25 @@ h1{
     text-shadow: 5px 5px 7px #B49C34;
 }
 
-.nav-main-container{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-}
-
 /* Header/Nav CSS ends */
-
-
 
 main{
     overflow: auto;
-    margin-left: 10px;
     background-image: url(../images/red-atlas.jpg);
     /* Image reference: https://www.perfectly-nintendo.com/nintendo-news-sept-26/ */
-    background-size: cover;
+    
     box-sizing: border-box;
-    height: 980px;
     padding: 0 2.5%;
 }
 
-
-h2, h3{
+h2, h3, h4{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: white;
     text-shadow: 3px 3px 1px #B49C34;
 }
 h2{
-    margin-top: 5%;
+    margin-top: 2.5%;
 }
 main p{
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -93,10 +103,77 @@ main p{
     color: rgb(37, 34, 34);
 }
 
+#main-aside-container{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
 
+#main-aside-container p{
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: rgb(37, 34, 34);
+}
 
+#location-grid{
+    background-color: rgba(174, 17, 17, 0.5);
+    border:rgb(174, 17, 17) solid 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "concert park roof"
+        "concert theatre cafe";
+}
+#location-grid > div{
+    border:rgb(174, 17, 17) solid 2px;
+}
+#location-grid img{
+    width: 90%;
+    padding: 10px 5%;
+}
+#location-grid h4{
+    padding: 0px 5%;
+    margin: 0;
+}
+#concert{
+    grid-area: concert;
+}
+#concert h3{
+    padding-left: 5%;
+}
 
+table{
+    width: 100%;
+    background-color: rgba(174, 17, 17, 0.5);
+}
+table, th, td{
+    border: 2px solid rgb(174, 17, 17);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.8%;
+}
 
+aside{
+    background-color: rgba(174, 17, 17);
+    padding: 10px;
+}
+#aside-container{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+#aside-container h3, p{
+    margin: 5px 5%;
+}
+#aside-container > div{
+    margin: 10px 0px;
+}
+aside img{
+    justify-items: center;
+    width: 90%;
+    padding: 0% 5%;
+
+}
 
 /* Footer CSS starts */
 
@@ -130,10 +207,43 @@ footer{
     clear: both;
     border-top: 4px solid #B49C34;
     background-color: white;
-    margin-top: 10px;
     color:#B49C34;
     font-weight: bold;
     text-align: center;
     height: 100px;
     overflow:auto;
+}
+
+@media screen and (max-width:768px) and (min-width:0px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        line-height: 50px;
+        padding: 50px 0px;
+    }
+    .img-nav{
+        width: 50%;
+    }
+    #main-aside-container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    #package-table{
+        margin-bottom: 10px;
+    }
+    footer{
+        height:auto;
+    }
+    footer > ul{
+        display: block;
+        
+    }
+    #hours, #contact{
+        float: none;
+        width: 90%;
+        padding:0;
+    }
+
 }
