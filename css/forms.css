@@ -169,3 +169,40 @@ footer{
     height: 100px;
     overflow:auto;
 }
+
+@media screen and (max-width:768px) and (min-width:0px){
+    nav{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #nav-container span{
+        display: none;
+    }
+    nav > div{
+        padding: 5px 0px;
+    }
+    #nav-title{
+        position: static;
+        padding: 12px 10%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    main{
+        grid-template-columns: 100%;
+        grid-template-rows:auto auto;
+    }
+    footer{
+        height:auto;
+    }
+    footer > ul{
+        display: block;
+        
+    }
+    #hours, #contact{
+        float: none;
+        width: 90%;
+        padding:0;
+    }
+}
