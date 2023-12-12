@@ -19,10 +19,11 @@ nav a:hover{
 nav ul{
     list-style: none;
     text-align: center;
+    padding-left: 10px;
 }
 nav li{
     box-sizing: border-box;
-    text-align: right;
+    text-align: center;
     padding-top: 15px;
 }
 li > img{
